@@ -27,7 +27,7 @@ const MainBody = () => {
     },
   }
 
-  const nameText = "Sarmistha"
+  const nameText = "Sarmistha 💛"
   
   return (
     <div className="container mx-auto px-8 py-16">
