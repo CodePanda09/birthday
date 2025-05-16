@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+nunito-<uniquifier> {
+    font-family:  'Noto Color Emoji',"Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* body {
+    font-family: 'Noto Color Emoji', sans-serif;
+  }
+   */
+
+/* Masonry Grid Styles */
+.masonry-column {
+  padding-left: 0 !important;
+  background-clip: padding-box;
+}
+
+.masonry-column > div {
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Messages css */
+
+:root {
+  --primary: #fff;
+  --bg-color: rgb(5, 53, 61);
+  --bg-envelope-color: #f5edd1;
+  --envelope-tab: #ecdeb8;
+  --envelope-cover: #e6cfa7;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --txt-color: #444;
+  --heart-color: rgb(252, 8, 231);
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.envelope-wrapper:hover {
+  transform: scale(0.95);
+}
+
+.envelope {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 170px solid var(--envelope-tab);
+  border-right: 200px solid transparent;
+  border-left: 200px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+
+.envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 170px solid transparent;
+  border-right: 200px solid var(--envelope-cover);
+  border-bottom: 130px solid var(--envelope-cover);
+  border-left: 200px solid var(--envelope-cover);
+}
+
+.envelope > .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 85%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 20px 10px;
+}
+
+.envelope > .letter > .text {
+  color: var(--txt-color);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.envelope > .letter > .text strong {
+  font-size: 18px;
+  color: #ec4899;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -10px;
+}
+
+.heart:after {
+  right: 10px;
+}
+
+.flap > .envelope:before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.flap > .envelope > .letter {
+  bottom: 150px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+}
+
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
