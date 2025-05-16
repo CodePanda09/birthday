@@ -18,9 +18,9 @@ const ImageGallery = () => {
     default: 4,
     1536: 4,
     1280: 3,
-    1024: 3,
+    1024: 2,
     768: 2,
-    640: 2,
+    640: 1,
   };
 
   return (
@@ -28,13 +28,13 @@ const ImageGallery = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="py-16 px-4 sm:px-8"
+      className="py-8 sm:py-16 px-4 sm:px-8"
     >
       <motion.h2
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-center mb-16 text-transparent bg-clip-text 
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-center mb-8 sm:mb-16 text-transparent bg-clip-text 
                    bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400
                    drop-shadow-[0_0_35px_rgba(236,72,153,0.4)]
                    tracking-tight leading-tight"
@@ -44,7 +44,7 @@ const ImageGallery = () => {
 
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        className="flex gap-6 w-full max-w-7xl mx-auto"
+        className="flex gap-3 sm:gap-6 w-full max-w-7xl mx-auto"
         columnClassName="masonry-column"
       >
         {images.map((image) => (

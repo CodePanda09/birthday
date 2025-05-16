@@ -27,21 +27,21 @@ const MainBody = () => {
     },
   }
 
-  const nameText = "Sarmistha 💛"
+  const nameText = "Sarmistha"
   
   return (
-    <div className="container mx-auto px-8 py-16">
-      <div className="flex items-start justify-between">
+    <div className="container mx-auto px-4 sm:px-8 py-8 sm:py-16">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
         {/* Left Section - Birthday Wish and Paragraph */}
         <motion.div 
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 1.5 }}
-          className="flex-1 pr-8"
+          className="flex-1 lg:pr-8 w-full"
         >
           {/* Animated Birthday Wish */}
           <motion.h1 
-            className="text-7xl font-bold text-transparent bg-clip-text 
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text 
                        bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500
                        drop-shadow-[0_0_35px_rgba(236,72,153,0.3)]
                        mb-8"
@@ -79,11 +79,11 @@ const MainBody = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', stiffness: 60, damping: 16, delay: 1.8, duration: 1.3 }}
-            className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 
+            className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-8 
                        border border-white/10 shadow-[0_0_25px_rgba(255,255,255,0.1)]
-                       max-w-2xl"
+                       max-w-2xl mx-auto lg:mx-0"
           >
-            <p className="text-white/90 text-lg leading-relaxed">
+            <p className="text-white/90 text-base sm:text-lg leading-relaxed">
               {/* Leave empty for user to fill */}
               Happy Birthday, my dearest Mistu! 💖 On this special day, I just want to say how incredibly proud I am of the amazing woman you are. You're not just the most beautiful person I've ever known—inside and out—but also the most fearless, independent, and hardworking soul I've had the joy of being around. You inspire me every day with your strength, your determination, and your ability to shine through anything life throws your way. You truly deserve all the happiness this world has to offer. May this year bring you endless joy, unwavering peace, and success in everything you set your heart to. Keep glowing, keep conquering, and never stop being the incredible Mistu that you are. Happy birthday, queen! 👑✨💐
             </p>
@@ -95,7 +95,7 @@ const MainBody = () => {
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: 'spring', stiffness: 60, damping: 18, duration: 1.5, delay: 0.7 }}
-          className="flex-1 flex justify-center"
+          className="flex-1 flex justify-center w-full"
         >
           <motion.div 
             whileHover={{ 
@@ -108,7 +108,7 @@ const MainBody = () => {
               stiffness: 300,
               damping: 20
             }}
-            className="relative w-[450px] h-[800px] rounded-3xl overflow-hidden
+            className="relative w-full max-w-[450px] aspect-[9/16] rounded-3xl overflow-hidden
                      border border-white/10 transform-gpu perspective-1000"
           >
             <motion.div

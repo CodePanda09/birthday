@@ -45,12 +45,12 @@ const Messages = () => {
   ];
 
   return (
-    <section className="py-16 px-8">
+    <section className="py-8 sm:py-16 px-4 sm:px-8">
       <motion.h2
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-center mb-16 text-transparent bg-clip-text 
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-center mb-8 sm:mb-16 text-transparent bg-clip-text 
                    bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400
                    drop-shadow-[0_0_35px_rgba(236,72,153,0.4)]
                    tracking-tight leading-tight"
@@ -62,7 +62,7 @@ const Messages = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 place-items-center"
       >
         {letters.map((letter, index) => (
           <motion.div
